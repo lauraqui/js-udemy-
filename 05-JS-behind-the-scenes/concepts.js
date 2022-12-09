@@ -37,3 +37,9 @@
 // 7.Scope chain vs. call stack
 //Scope chain: order in which functions are written in the code. Has nothing to do with order in which functions were called.
 // Call stack: order in which functions were called.
+
+// 8. Variable Environment:  Hoisting and the TDZ
+// Hoisting: makes some types of variables acessible/usable in the code before they`re actually declared. "Variables lifted to the top pf their scope".
+// Before the execution: code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object.
+// Why TDZ? make it easier to avoid and catch errors, accessing variables before declaration is bad practice and should be avoid.
+// Why hoisting? Using functions before actual declarations; var hoisting is just a byproduct;
