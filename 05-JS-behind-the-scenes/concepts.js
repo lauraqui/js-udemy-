@@ -43,3 +43,11 @@
 // Before the execution: code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object.
 // Why TDZ? make it easier to avoid and catch errors, accessing variables before declaration is bad practice and should be avoid.
 // Why hoisting? Using functions before actual declarations; var hoisting is just a byproduct;
+
+//9. How the this keyword works:
+// This keyword/variable: Special variable that is created for wvery execution context(every function).Take the value of points to the "owner" of the functionin which the this keyword is used. This is not static. It depends how the function is called, and its value is only assigned when the function is actually called.
+// Ways to call the functions:
+// a)Method: this = <object that is calling the method>
+// b) Simple functions call: this = undefined
+// c) Arrow functions: is not a kind to call the function but a important kind of function for considerated. The arrow function will be the this keyword of surrounding function ((technically = lexical this).
+// OBS: this does not point to the function itself, and also NOT the its variable environment.
