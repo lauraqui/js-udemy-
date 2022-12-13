@@ -87,21 +87,66 @@
 
 // calcAgeArrow(1980);
 
+// const jonas = {
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
+// jonas.calcAge();
+
+// const matilda = {
+//   year: 2017,
+// };
+
+// matilda.calcAge = jonas.calcAge;
+// matilda.calcAge();
+
+// const f = jonas.calcAge;
+// f();
+
+// ==> REGULAR FUNCTIONS VS. ARROW FUNCTIONS <==
+// var firstName = "Matilda";
+
+// const jonas = {
+//   firstName: "Jonas",
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+
+//   greet: function () {
+//     console.log(this);
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// };
+
+// jonas.greet();
+// jonas.calcAge();
+
+//function inside of method
 const jonas = {
+  firstName: "Jonas",
   year: 1991,
   calcAge: function () {
-    console.log(this);
+    // console.log(this);
     console.log(2037 - this.year);
+
+    const isMillenial = function () {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillenial();
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
   },
 };
+
+jonas.greet();
 jonas.calcAge();
-
-const matilda = {
-  year: 2017,
-};
-
-matilda.calcAge = jonas.calcAge;
-matilda.calcAge();
-
-const f = jonas.calcAge;
-f();

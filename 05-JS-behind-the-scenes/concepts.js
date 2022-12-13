@@ -51,3 +51,6 @@
 // b) Simple functions call: this = undefined
 // c) Arrow functions: is not a kind to call the function but a important kind of function for considerated. The arrow function will be the this keyword of surrounding function ((technically = lexical this).
 // OBS: this does not point to the function itself, and also NOT the its variable environment.
+
+//10. Regular functions vs. Arrow functions:
+// Don't use the arrow function like a method!
